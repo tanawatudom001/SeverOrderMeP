@@ -80,7 +80,7 @@ public class Home extends AppCompatActivity
         //set name for user
         View headerView = navigationView.getHeaderView(0);
         txtFullName = (TextView)headerView.findViewById(R.id.txtFullName);
-        txtFullName.setText(Common.currentUser.getName());
+        txtFullName.setText(Common.currentuser.getName());
 
         recyler_menu = (RecyclerView)findViewById(R.id.recycler_menu);
         recyler_menu.setHasFixedSize(true);
@@ -151,6 +151,8 @@ public class Home extends AppCompatActivity
         } else if (id == R.id.nav_cart) {
 
         } else if (id == R.id.nav_order) {
+            Intent orders = new Intent(Home.this,OrderStatus.class);
+            startActivity(orders);
 
         } else if (id == R.id.nav_log_out) {
 

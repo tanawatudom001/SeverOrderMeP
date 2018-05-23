@@ -62,7 +62,7 @@ public class SignIn extends AppCompatActivity {
                     if (Boolean.parseBoolean(user.getIsStaff())) { // if IsStaff is true
                         if (user.getPassword().equals(localPassword)) {
                             Intent Iogin = new Intent(SignIn.this,Home.class);
-                            Common.currentUser = user;
+                            Common.currentuser = user;
                             startActivity(Iogin);
                             finish();
 
